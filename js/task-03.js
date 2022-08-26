@@ -22,20 +22,12 @@ const images = [
   },
 ];
 
-const galleryEl = document.querySelector('.gallery');
-const elements = [];
-
-
 for (const el of images) {
-  const some = galleryEl.insertAdjacentHTML('beforeend',
-    `<li><img src='${el.url}' alt='${el.alt}' width="350"/> </li>`);
-  elements.push(some);
+  const galleryEl = document.querySelector('.gallery');
+  galleryEl.insertAdjacentHTML("afterbegin",
+    `<li class=item-galery><img src="${el.url}" alt='${el.alt}'/> </li>`);
 };
 
-
-galleryEl.style = `
-display: flex;
-justifyCntent: space-between;
-alignItems: centr;
-list-style:none;
-`
+Array.prototype.forEach.call(document.images, function (myImg) {
+  myImg.style.width = "100%";
+});
