@@ -23,7 +23,7 @@ const images = [
 ];
 
 
-let imagesList = ''
+let imagesList = '';
 for (const el of images) {
   imagesList += `<li class=item-galery><img src="${el.url}" alt='${el.alt}'/> </li>`
 };
