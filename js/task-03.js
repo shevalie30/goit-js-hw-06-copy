@@ -26,6 +26,7 @@ const images = [
 let imagesList = ''
 for (const el of images) {
   imagesList += `<li class=item-galery><img src="${el.url}" alt='${el.alt}'/> </li>`
-}
-document.querySelector('.gallery').insertAdjacentHTML('afterbegin', imagesList)
+};
+document.querySelector('.gallery').insertAdjacentHTML('afterbegin', imagesList);
+
 
