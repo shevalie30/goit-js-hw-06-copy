@@ -22,16 +22,10 @@ const images = [
   },
 ];
 
-const galleryEl = document.querySelector('.gallery');
 
-
-
+let imagesList = ''
 for (const el of images) {
-  galleryEl.insertAdjacentHTML("afterbegin",
-    `<li class=item-galery><img src="${el.url}" alt='${el.alt}'/> </li>`);
-};
-
-Array.prototype.forEach.call(document.images, function (myImg) {
-  myImg.style.width = "100%";
-});
+  imagesList += `<li class=item-galery><img src="${el.url}" alt='${el.alt}'/> </li>`
+}
+document.querySelector('.gallery').insertAdjacentHTML('afterbegin', imagesList)
 
