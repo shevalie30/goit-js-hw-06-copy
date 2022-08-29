@@ -22,8 +22,11 @@ const images = [
   },
 ];
 
+const galleryEl = document.querySelector('.gallery');
+
+
+
 for (const el of images) {
-  const galleryEl = document.querySelector('.gallery');
   galleryEl.insertAdjacentHTML("afterbegin",
     `<li class=item-galery><img src="${el.url}" alt='${el.alt}'/> </li>`);
 };
@@ -31,3 +34,4 @@ for (const el of images) {
 Array.prototype.forEach.call(document.images, function (myImg) {
   myImg.style.width = "100%";
 });
+
